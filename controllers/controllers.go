@@ -19,15 +19,14 @@ func checkErr(err error, msg string) {
 }
 func Cors() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		c.Writer.Header().Add("Access-Control-Allow-Origin", "*")
 		c.Next()
 	}
 }
 
-func GetUserDetail() {
-	return
+func GetUserDetail(c *gin.Context) {
+	c.String(200, "Success")
 }
 
-func GetUser() {
-	return
+func GetUser(c *gin.Context) {
+	c.String(200, "Success")
 }
